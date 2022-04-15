@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/index.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form action="/validate" method="POST">
+        <fieldset>
+          <legend class="pokedex_title">Pokedex API</legend>
+          <div class="form-group">
+            <label for="answer" class="form-label mt-4"
+              >What Pokemon did you see</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="answer"
+              placeholder="Answer"
+              name="answer"
+            />
+          </div>
+          <button type="submit" class="mt-4 btn btn-primary">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
