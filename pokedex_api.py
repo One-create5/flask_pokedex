@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from unicodedata import name
 from flask import Flask
 from flask import redirect
 from flask import url_for
